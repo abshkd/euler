@@ -1,5 +1,5 @@
 /*
- * Created by Abhishek Dujari (ab@3computing.com) on 6/30/17 2:53 PM
+ * Created by Abhishek Dujari (ab@3computing.com) on 6/30/17 4:10 PM
  */
 
 import org.junit.Test;
@@ -13,26 +13,25 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
-public class Problem6Test {
+public class Problem7Test {
 
-    private Problem6 problem;
+    private Problem7 problem;
     private int input;
     private long expected;
 
     @Parameters
     public static List<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {20, 41230L},
-                {10, 2640L},
-                {100, 25164150L}
+                {6, 13},
+                {10001, 104743}
         });
     }
 
-    //constructor
-    public Problem6Test(int input, long expected) {
+    //contructor
+    public Problem7Test(int input, long expected) {
+        problem = new Problem7();
         this.input = input;
         this.expected = expected;
-        problem = new Problem6();
     }
 
     @Test
@@ -40,4 +39,5 @@ public class Problem6Test {
         problem.solve(input);
         assertEquals(expected, problem.getResult());
     }
+
 }

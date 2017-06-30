@@ -16,20 +16,20 @@ import static org.junit.Assert.assertEquals;
 public class Problem6Test {
 
     private static Problem6 problem = new Problem6();
-    private long input;
+    private int input;
     private long expected;
 
     @Parameters
     public static List<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {10L, 2640L},
-                {20L, 0L},
-                {100L, 1912970916L}
+                {10, 2640L},
+                {20, 0L},
+                {100, 25164150L}
         });
     }
 
     //constructor
-    public Problem6Test(long input, long expected) {
+    public Problem6Test(int input, long expected) {
         this.input = input;
         this.expected = expected;
     }

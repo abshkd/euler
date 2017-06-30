@@ -8,16 +8,13 @@ public class Problem6 {
     private long squareOfSum = 0;
     private long result = 0;
 
-    public long solve(long input) {
+    public long solve(int input) {
         for (long i = 1; i <= input; i++) {
             sumOfSqares += i * i;
             squareOfSum += i;
         }
 
-        System.out.println(sumOfSqares);
         squareOfSum *= squareOfSum;
-        System.out.println(squareOfSum);
-
         result = squareOfSum - sumOfSqares;
         return result;
     }

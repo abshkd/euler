@@ -23,7 +23,8 @@ public class Problem7Test {
     public static List<Object[]> data() {
         return Arrays.asList(new Object[][]{
                 {6, 13},
-                {10001, 104743}
+                {10001, 104743},
+                {100001,1299721}
         });
     }
 

@@ -4,18 +4,24 @@
 
 public class Problem6 {
 
-    private long sumOfSqares = 0;
-    private long squareOfSum = 0;
-    private long result = 0;
+    private long sumOfSquares;
+    private long squareOfSum;
+    private long result;
 
-    public long solve(int input) {
-        for (long i = 1; i <= input; i++) {
-            sumOfSqares += i * i;
+    public void solve(int input) {
+        sumOfSquares = 0;
+        squareOfSum = 0;
+        result = 0;
+        for (int i = 1; i <= input; i++) {
+            sumOfSquares += i * i;
             squareOfSum += i;
         }
 
         squareOfSum *= squareOfSum;
-        result = squareOfSum - sumOfSqares;
+        result = squareOfSum - sumOfSquares;
+    }
+
+    public long getResult() {
         return result;
     }
 }

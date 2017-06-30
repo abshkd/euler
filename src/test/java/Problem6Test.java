@@ -15,15 +15,15 @@ import static org.junit.Assert.assertEquals;
 @RunWith(Parameterized.class)
 public class Problem6Test {
 
-    private static Problem6 problem = new Problem6();
+    private static Problem6 problem;
     private int input;
     private long expected;
 
     @Parameters
     public static List<Object[]> data() {
         return Arrays.asList(new Object[][]{
+                {20, 41230L},
                 {10, 2640L},
-                {20, 0L},
                 {100, 25164150L}
         });
     }
@@ -32,10 +32,12 @@ public class Problem6Test {
     public Problem6Test(int input, long expected) {
         this.input = input;
         this.expected = expected;
+        problem = new Problem6();
     }
 
     @Test
     public void test() {
-        assertEquals(expected, problem.solve(input));
+        problem.solve(input);
+        assertEquals(expected, problem.getResult());
     }
 }

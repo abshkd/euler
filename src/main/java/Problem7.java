@@ -16,7 +16,7 @@ public class Problem7 {
     public void solve(int input) {
         primes = new ArrayList<Integer>();
         primes.add(2);
-        for (int i = 3; i < Integer.MAX_VALUE; i=i+2) {
+        for (int i = 3; i < Integer.MAX_VALUE; i = i + 2) {
             boolean isPrime = true;
             for (Integer prime : primes) {
                 if (i % prime == 0) {
